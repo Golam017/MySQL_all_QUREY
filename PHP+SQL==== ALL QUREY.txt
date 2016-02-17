@@ -23,5 +23,22 @@ MORE DATA UPDATE==> UPDATE ct_info SET SALARY="60700", OCCUPATION="PLAYER"  WHER
 
 LIKE===>  SELECT NAME FROM ct_info WHERE NAME LIKE "R%"
 
+===============[TABEL -RELATION-QUREY ]=====================
+CREATE TABLE student_info (
+	ID VARCHAR(10),
+	Name VARCHAR(50),
+	Email VARCHAR(50),
+	PRIMARY KEY (ID)
+)
+
+
+CREATE TABLE mark_info (
+	st_ID VARCHAR(10),
+	Subject VARCHAR(30),
+	Department VARCHAR(20),
+	Mark INT(3),
+	FOREIGN KEY (st_ID) REFERENCES student_info (ID)
+)
+=============================================================
 CONCAT===>  SELECT CONCAT(ID,',',NAME) FROM ct_info
 UPPER===> SELECT NAME,UPPER(NAME) FROM ct_info
