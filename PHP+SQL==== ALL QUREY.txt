@@ -22,6 +22,8 @@ DELEATE===> DELETE FROM ct_info WHERE ID="2009";
 MORE DATA UPDATE==> UPDATE ct_info SET SALARY="60700", OCCUPATION="PLAYER"  WHERE  EMAIL="rana@gmail.com";
 
 LIKE===>  SELECT NAME FROM ct_info WHERE NAME LIKE "R%"
+CONCAT===>  SELECT CONCAT(ID,',',NAME) FROM ct_info
+UPPER===> SELECT NAME,UPPER(NAME) FROM ct_info
 
 ===============[TABEL -RELATION-QUREY ]=====================
 CREATE TABLE student_info (
@@ -40,5 +42,3 @@ CREATE TABLE mark_info (
 	FOREIGN KEY (st_ID) REFERENCES student_info (ID)
 )
 =============================================================
-CONCAT===>  SELECT CONCAT(ID,',',NAME) FROM ct_info
-UPPER===> SELECT NAME,UPPER(NAME) FROM ct_info
